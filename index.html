@@ -13,10 +13,50 @@
 
 <body>
 
-    <h1> </h1>
-    <hr>
+    <header>
+        <h1>Churrascômetro</h1>
+        <p>Planeje seu churrasco típico brasileiro para o domingão e feriados ;)</p>
+        <nav>
+            <ol id="menu">
+                <a href="index.html"><li>Calcular</li></a>
+                <a href="statics.html" rel="next" target="_self"><li>Estatísticas</li></a>
+                <a href="author.html" rel="author" target="_self"><li>Criador do site</li></a>
+            </ol>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
+    <main>
+
+        <h2>Numero de Adultos:</h2>
+        <input type="number" id="">
+        <h2>Número de Crianças:</h2>
+        <input type="number" id="">
+        <h2>Duração do evento em horas:</h2>
+        <input type="number" id="">
+
+        <div>
+            <input type="button" value="Calcular">
+            <input type="button" value="Salvar">
+        </div>
+
+    </main>
+
+    <div id="result">
+
+    </div>
+
+    <div id="warning">
+        <p>Não deixe campos em branco!</p>
+    </div>
+
+    <footer>
+        <abbr title="Modo Claro / Escuro"><div class="footIcon"><img src="" class="footIcon"></abbr>
+        <abbr title="Português do Brasil"><div class="footIcon"><img src="" class="footIcon"></abbr>
+        <a href="" target="_blank" rel="author"><abbr title="Meu GitHub"><img src="" class="footIcon"></abbr></a>
+        <a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbr title="Foto de fundo: Malte Luk no Pexels"><img src="" class="footIcon"></abbr></a>
+    </footer>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
