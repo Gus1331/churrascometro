@@ -1,1 +1,101 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Neonderthaw&family=Roboto:ital,wght@0,100;1,100&display=swap');
+
+:root{
+    --title: 'Neonderthaw', cursive;
+    --text: 'Roboto', sans-serif;
+    --color01: rgb(089, 002, 2);
+    --color02: rgb(166, 003, 3);
+    --color03: rgb(217, 004, 4);
+    --color04: rgb(242, 116, 5);
+    --color05: rgb(242, 135, 5);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+body{
+    background-color: rgb(66, 15, 11);
+    background-image: url(content/bckg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: var(--text);
+}
+
+header{
+    background-color: var(--color03);
+    background-image: linear-gradient(to bottom , var(--color03) , var(--color02));
+    border: 1px solid rgb(0, 0, 0);
+    margin: -1px auto 150px auto;
+    max-width: 950px;
+    overflow: hidden;
+    border-radius: 0 0 5px 8px;
+}
+h1{
+    font-family: var(--title);
+    color: var(--color05);
+    font-size: 5.7em;
+    text-shadow: 2px 1px 2px rgb(255, 255, 255);
+    margin: 10px 60px;
+}
+header > p{
+    color: rgb(255, 255, 255);
+    margin: 0 25px 20px 25px;
+    text-align: right;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.432);
+    font-size: 1.3em;
+}
+#menu{
+    list-style: none;
+    list-style-position: inside;
+    position: relative;
+    height: 32px;
+}
+#menu > a > li{
+    display: inline-block;
+    position: absolute;
+    padding: 0;
+    border-top: 3px solid var(--color01);
+    padding: 5px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px rgb(0, 0, 0);
+    
+}
+#li1{
+    width: 33.33%;
+    left: 0;
+}
+#li2{
+    right: 50%;
+    width: 33.35%;
+    transform: translateX(50%);
+    border-right: 5px solid var(--color01);
+    border-left: 5px solid var(--color01);
+    
+}
+#li3{
+    width: 33.33%;
+    right: 0;
+}
+
+#menu > a > li:hover{
+    background-color: rgba(255, 255, 255, 0.041);
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.781);
+}
+
+
+main{
+    margin: 0 auto;
+    background-image: linear-gradient(to bottom , var(--color03) , var(--color02));
+    border-radius: 0 0 5px 8px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+    max-width: 950px;
+    padding: 20px;
+}

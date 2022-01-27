@@ -21,3 +21,19 @@
     Obs: deixar sempre 3 mesas para colocar as comidas e bebidas e 3 cadeiras sobrando
 */
 
+//Variaveis
+let li1 = document.getElementById("li1")
+let li2 = document.getElementById("li2")
+let li3 = document.getElementById("li3")
+
+function menu1(){
+    li1.style.backgroundColor = "rgba(0, 0, 0, 0.164)"
+}
+function menu2(){
+    li2.style.backgroundColor = "rgba(0, 0, 0, 0.164)"
+}
+function menu3(){
+    li3.style.backgroundColor = "rgba(0, 0, 0, 0.164)"
+}
+function lights(){
+}
