@@ -19,11 +19,15 @@
     color: rgb(0, 0, 0);
 }
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: rgb(66, 15, 11);
-    background-image: url(content/bckg.jpg);
+    background-image: url(content/bckg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: var(--text);
 }
 
@@ -41,7 +45,7 @@ h1{
     color: var(--color05);
     font-size: 5.7em;
     text-shadow: 2px 1px 2px rgb(255, 255, 255);
-    margin: 10px 60px;
+    margin: -5px 60px;
 }
 header > p{
     color: rgb(255, 255, 255);
@@ -91,11 +95,67 @@ header > p{
 
 
 main{
-    margin: 0 auto;
-    background-image: linear-gradient(to bottom , var(--color03) , var(--color02));
+    margin: 0 auto 50px auto;
+    background-image: linear-gradient(to bottom , rgb(0, 0, 0) , rgb(27, 1, 1));
     border-radius: 0 0 5px 8px;
     border: 1px solid rgb(0, 0, 0);
     overflow: hidden;
     max-width: 950px;
-    padding: 20px;
+    padding: 40px 25px;
+    color: rgb(255, 255, 255);
+}
+main > h2{
+    color: var(--color03);
+    text-shadow: 1px 2px 2px rgba(143, 143, 143, 0.432);
+    font-size: 1.6em;
+}
+main > input{
+    width: 3em;
+    height: 2em;
+    margin: 2px 0 22px 25px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 1.1em;
+}
+.btn{
+    background-color: var(--color03);
+    border: 2px solid var(--color02);
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    border-radius: 6px;
+}
+.btn:hover{
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.507);
+}
+.btn:active{
+    background-color: rgb(155, 10, 10);
+    border: 2px solid rgb(41, 2, 2);
+    color: rgb(221, 205, 205);
+    text-shadow: none;
+}
+
+#warning{
+    background-color: var(--color03);
+    padding: 5px;
+    width: 100%;
+    position: fixed;
+    bottom: 2.3em;
+    left: 0;
+    display: none;
+}
+#warning > p{
+    color: rgb(255, 255, 255);
+    text-align: center;    
+}
+
+footer{
+    /* background-color: greenyellow; */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2.3em;
+    border-top: 1px solid rgb(3, 0, 0);
+    background-image: linear-gradient(to bottom , rgb(27, 1, 1) , rgb(0, 0, 0));
 }
