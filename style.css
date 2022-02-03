@@ -103,6 +103,7 @@ main{
     max-width: 950px;
     padding: 40px 25px;
     color: rgb(255, 255, 255);
+    position: relative;
 }
 main > h2{
     color: var(--color03);
@@ -126,13 +127,27 @@ main > input{
     border-radius: 6px;
 }
 .btn:hover{
-    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.507);
+    text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.616);
+    cursor: pointer;
 }
 .btn:active{
     background-color: rgb(155, 10, 10);
     border: 2px solid rgb(41, 2, 2);
     color: rgb(221, 205, 205);
     text-shadow: none;
+}
+#btn1{
+    position: absolute;
+    left: 25px;
+    bottom: 25px;
+}
+#btn2{
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+}
+main > div{
+    height: 35px;
 }
 
 #warning{
@@ -158,4 +173,5 @@ footer{
     height: 2.3em;
     border-top: 1px solid rgb(3, 0, 0);
     background-image: linear-gradient(to bottom , rgb(27, 1, 1) , rgb(0, 0, 0));
+    box-shadow: 0 -5px 3px rgba(255, 255, 255, 0.068);
 }
