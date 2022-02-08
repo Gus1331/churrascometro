@@ -24,36 +24,38 @@
             </ol>
         </nav>
     </header>
+    
+
+    <div id="result">
+
+    </div>
+
 
     <main>
-
         <h2>Número de Adultos:</h2>
         <input type="number" id="p1" max="999" min="1">
         <h2>Número de Crianças:</h2>
         <input type="number" id="p2" max="999" min="0">
         <h2>Duração do evento em horas:</h2>
         <input type="number" id="duration" max="24" min="1" placeholder="1">
-
         <div>
             <input type="button" value="Calcular" class="btn" id="btn1">
             <input type="button" value="Salvar" class="btn" id="btn2">
         </div>
-
     </main>
 
-    <div id="result">
-
-    </div>
 
     <div id="warning">
         <p>Não deixe campos em branco!</p>
     </div>
 
     <footer>
-        <abbr title="Modo Claro / Escuro"><div class="footIcon"><img src="" class="footIcon"></abbr>
-        <abbr title="Português do Brasil"><div class="footIcon"><img src="" class="footIcon"></abbr>
-        <a href="" target="_blank" rel="author"><abbr title="Meu GitHub"><img src="" class="footIcon"></abbr></a>
-        <a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbr title="Foto de fundo: Malte Luk no Pexels"><img src="" class="footIcon"></abbr></a>
+        <div id="align">
+            <abbr title="Modo Claro / Escuro"><div class="footIcon"><img src="content/modeicon1.png" class="footIcon"></abbr>
+            <abbr title="Português do Brasil"><div class="footIcon"><img src="content/bricon.png" class="footIcon"></abbr>
+            <a href="" target="_blank" rel="author"><abbr title="Meu GitHub"><img src="content/githubicon.png" class="footIcon"></abbr></a>
+            <a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbr title="Foto de fundo: Malte Luk no Pexels"><div class="footIcon" id="footCredit">C</div></abbr></a>
+        </div>
     </footer>
 
     <script src="script.js" defer></script>

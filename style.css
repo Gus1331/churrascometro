@@ -4,11 +4,15 @@
 :root{
     --title: 'Neonderthaw', cursive;
     --text: 'Roboto', sans-serif;
-    --color01: rgb(089, 002, 2);
-    --color02: rgb(166, 003, 3);
-    --color03: rgb(217, 004, 4);
-    --color04: rgb(242, 116, 5);
-    --color05: rgb(242, 135, 5);
+    --color01: rgb(089, 002, 002);
+    --color02: rgb(166, 003, 003);
+    --color03: rgb(217, 004, 004);
+    --color04: rgb(242, 116, 005);
+    --color05: rgb(242, 135, 005);
+    --color06: rgb(027, 001, 001);
+    --color07: rgba(143, 143, 143, 0.432);
+    --color08: rgb(255, 255, 255);
+    --color09: rgb(000, 000, 000);
 }
 *{
     margin: 0;
@@ -44,7 +48,7 @@ h1{
     font-family: var(--title);
     color: var(--color05);
     font-size: 5.7em;
-    text-shadow: 2px 1px 2px rgb(255, 255, 255);
+    text-shadow: 2px 1px 2px var(--color08);
     margin: -5px 60px;
 }
 header > p{
@@ -67,8 +71,8 @@ header > p{
     border-top: 3px solid var(--color01);
     padding: 5px;
     text-align: center;
-    color: rgb(255, 255, 255);
-    text-shadow: 0 0 5px rgb(0, 0, 0);
+    color: var(--color08);
+    text-shadow: 0 0 5px var(--color09);
     
 }
 #li1{
@@ -96,18 +100,18 @@ header > p{
 
 main{
     margin: 0 auto 50px auto;
-    background-image: linear-gradient(to bottom , rgb(0, 0, 0) , rgb(27, 1, 1));
+    background-image: linear-gradient(to bottom , var(--color09) 90% , var(--color06));
     border-radius: 0 0 5px 8px;
     border: 1px solid rgb(0, 0, 0);
     overflow: hidden;
     max-width: 950px;
     padding: 40px 25px;
-    color: rgb(255, 255, 255);
+    color: var(--color08);
     position: relative;
 }
 main > h2{
     color: var(--color03);
-    text-shadow: 1px 2px 2px rgba(143, 143, 143, 0.432);
+    text-shadow: 1px 2px 2px var(--color07);
     font-size: 1.6em;
 }
 main > input{
@@ -171,7 +175,25 @@ footer{
     left: 0;
     width: 100%;
     height: 2.3em;
-    border-top: 1px solid rgb(3, 0, 0);
-    background-image: linear-gradient(to bottom , rgb(27, 1, 1) , rgb(0, 0, 0));
+    border-top: 1px solid rgb(0, 0, 0);
+    background-image: linear-gradient(to bottom , var(--color06) , var(--color09));
     box-shadow: 0 -5px 3px rgba(255, 255, 255, 0.068);
+}
+.footIcon{
+    display: inline;
+    width: 1.8em;
+    border-radius: 50%;
+    margin: 0 2px;
+    cursor: pointer;
+}
+#footCredit{
+    display: inline;
+    color: rgb(255, 255, 255);
+    font-size: 2em;
+    font-weight: light;
+    font-family: fantasy;
+}
+#align{
+    position: absolute;
+    right: 5px;
 }
