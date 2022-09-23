@@ -13,6 +13,7 @@
     --color07: rgba(143, 143, 143, 0.432);
     --color08: rgb(255, 255, 255);
     --color09: rgb(000, 000, 000);
+    --color10: rgb(221, 125, 125);
 }
 *{
     margin: 0;
@@ -42,7 +43,7 @@ header{
     margin: -1px auto 150px auto;
     max-width: 950px;
     overflow: hidden;
-    border-radius: 0 0 5px 8px;
+    border-radius: 0 0 5px 5px;
 }
 h1{
     font-family: var(--title);
@@ -50,6 +51,7 @@ h1{
     font-size: 5.7em;
     text-shadow: 2px 1px 2px var(--color08);
     margin: -5px 60px;
+    transition: 0.05s;
 }
 header > p{
     color: rgb(255, 255, 255);
@@ -67,13 +69,11 @@ header > p{
 #menu > a > li{
     display: inline-block;
     position: absolute;
-    padding: 0;
     border-top: 3px solid var(--color01);
     padding: 5px;
     text-align: center;
     color: var(--color08);
     text-shadow: 0 0 5px var(--color09);
-    
 }
 #li1{
     width: 33.33%;
@@ -85,7 +85,6 @@ header > p{
     transform: translateX(50%);
     border-right: 5px solid var(--color01);
     border-left: 5px solid var(--color01);
-    
 }
 #li3{
     width: 33.33%;
@@ -101,15 +100,14 @@ header > p{
 main{
     margin: 0 auto 50px auto;
     background-image: linear-gradient(to bottom , var(--color09) 90% , var(--color06));
-    border-radius: 0 0 5px 8px;
+    border-radius: 0 0 8px 8px;
     border: 1px solid rgb(0, 0, 0);
     overflow: hidden;
     max-width: 950px;
     padding: 40px 25px;
-    color: var(--color08);
     position: relative;
 }
-main > h2{
+h2, strong{
     color: var(--color03);
     text-shadow: 1px 2px 2px var(--color07);
     font-size: 1.6em;
@@ -168,15 +166,40 @@ main > div{
     text-align: center;    
 }
 
+
+#result{
+    margin: 0 auto 125px auto;
+    background-image: linear-gradient(to top , var(--color09) 90% , var(--color06));
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+    overflow: hidden;
+    max-width: 950px;
+    padding: 40px 25px;
+    position: relative;
+    display: none;
+}
+#result>p{
+    color: var(--color08);
+    font-size: 1.2em;
+    padding: 15px 30%;
+
+}
+h3{
+    color: var(--color08);
+    font-weight: bolder;
+    font-size: 2em;
+    text-align: center;
+}
+
+
 footer{
-    /* background-color: greenyellow; */
     position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 2.3em;
     border-top: 1px solid rgb(0, 0, 0);
-    background-image: linear-gradient(to bottom , var(--color06) , var(--color09));
+    background-color: var(--color09);
     box-shadow: 0 -5px 3px rgba(255, 255, 255, 0.068);
 }
 .footIcon{
@@ -188,7 +211,7 @@ footer{
 }
 #footCredit{
     display: inline;
-    color: rgb(255, 255, 255);
+    color: var(--color08);
     font-size: 2em;
     font-weight: light;
     font-family: fantasy;

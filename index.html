@@ -18,31 +18,48 @@
         <p>Planeje seu churrasco típico brasileiro para o domingão e feriados.</p>
         <nav>
             <ol id="menu">
-                <a href="index.html"><li id="li1">Calcular</li></a>
-                <a href="statics.html" rel="next" target="_self"><li id="li2">Estatísticas</li></a>
-                <a href="author.html" rel="author" target="_self"><li id="li3">Criador do site</li></a>
+                <a href="index.html">
+                    <li id="li1">Calcular</li>
+                </a> <!-- consertar! -->
+                <a href="statics.html" rel="next" target="_self">
+                    <li id="li2">Estatísticas</li>
+                </a>
+                <a href="author.html" rel="author" target="_self">
+                    <li id="li3">Criador do site</li>
+                </a>
             </ol>
         </nav>
     </header>
-    
-
-    <div id="result">
-
-    </div>
 
 
     <main>
         <h2>Número de Adultos:</h2>
-        <input type="number" id="p1" max="999" min="1">
+        <input type="number" id="people1" max="999" min="1">
         <h2>Número de Crianças:</h2>
-        <input type="number" id="p2" max="999" min="0">
+        <input type="number" id="people2" max="999" min="0">
         <h2>Duração do evento em horas:</h2>
         <input type="number" id="duration" max="24" min="1" placeholder="1">
         <div>
-            <input type="button" value="Calcular" class="btn" id="btn1">
+            <a href="#result"><input type="button" value="Calcular" onclick="calc()" class="btn" id="btn1"></a>
             <input type="button" value="Salvar" class="btn" id="btn2">
         </div>
     </main>
+
+
+    <div id="result">
+        <h3>Para o seu churrasco, será necessário:</h3>
+        <p id="resultText0">Recomendamos que no minímo para o seu evento não faltar nada será necessário <strong> ' +
+                meat.toFixed(2) + 'KG de Carne </strong> para consumo principal, caso decida adoçar a festa, <strong> '
+                + Math.round(candy) + ' Pacotes de docês</strong> (com 6 unidades ou 90g dependedo do docê) seria uma
+            boa pedida. </p>
+        <p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de
+            <strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ou
+            qualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'L
+                de Refrigerante ou Suco </strong> (qualquer bebida leve). </p>
+        <p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario em
+            média <strong> '+ Math.ceil(chairs) +' Cadeiras</strong> e <strong>'+ tables +' Mesas</strong> (de quatro
+            lugares).</p>
+    </div>
 
 
     <div id="warning">
@@ -51,10 +68,19 @@
 
     <footer>
         <div id="align">
-            <abbr title="Modo Claro / Escuro"><div class="footIcon"><img src="content/modeicon1.png" class="footIcon"></abbr>
-            <abbr title="Português do Brasil"><div class="footIcon"><img src="content/bricon.png" class="footIcon"></abbr>
-            <a href="" target="_blank" rel="author"><abbr title="Meu GitHub"><img src="content/githubicon.png" class="footIcon"></abbr></a>
-            <a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbr title="Foto de fundo: Malte Luk no Pexels"><div class="footIcon" id="footCredit">C</div></abbr></a>
+            <abbr title="Modo Claro / Escuro">
+                <div class="footIcon"><img onclick="modeSwitch();" id="modeIco" src="content/modeicon0.png"
+                        class="footIcon">
+            </abbr>
+            <abbr title="Português do Brasil">
+                <div class="footIcon"><img src="content/bricon.png" class="footIcon">
+            </abbr>
+            <a href="https://github.com/Gus1331" target="_blank" rel="author"><abbr title="Meu GitHub"><img id="gitIco"
+                        src="content/githubicon0.png" class="footIcon"></abbr></a>
+            <a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbr
+                    title="Foto de fundo: Malte Luk no Pexels">
+                    <div class="footIcon" id="footCredit">C</div>
+                </abbr></a>
         </div>
     </footer>
 
