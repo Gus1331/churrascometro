@@ -66,7 +66,7 @@ header > p{
     position: relative;
     height: 32px;
 }
-#menu > a > li{
+#menu > li{
     display: inline-block;
     position: absolute;
     border-top: 3px solid var(--color01);
@@ -91,17 +91,18 @@ header > p{
     right: 0;
 }
 
-#menu > a > li:hover{
+#menu  > li:hover{
     background-color: rgba(255, 255, 255, 0.041);
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.781);
+    cursor: pointer;
 }
 
 
-main{
-    margin: 0 auto 50px auto;
+main, article#statics, section#authorPage{
+    margin: 0 auto 100px auto;
     background-image: linear-gradient(to bottom , var(--color09) 90% , var(--color06));
     border-radius: 0 0 8px 8px;
-    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid var(--color09);
     overflow: hidden;
     max-width: 950px;
     padding: 40px 25px;
@@ -124,7 +125,7 @@ main > input{
     background-color: var(--color03);
     border: 2px solid var(--color02);
     padding: 5px;
-    color: rgb(255, 255, 255);
+    color: var(--color08);
     font-size: 1.3em;
     border-radius: 6px;
 }
@@ -148,7 +149,7 @@ main > input{
     right: 25px;
     bottom: 25px;
 }
-main > div{
+main > div#bts{
     height: 35px;
 }
 
@@ -162,7 +163,7 @@ main > div{
     display: none;
 }
 #warning > p{
-    color: rgb(255, 255, 255);
+    color: var(--color08);
     text-align: center;    
 }
 
@@ -191,6 +192,66 @@ h3{
     text-align: center;
 }
 
+/* statics */
+
+/* author page */
+
+section#authorPage{
+    min-height: 500px;
+    position: relative;
+    margin-bottom: 160px;
+}
+div#frameImg{
+    height: 27vw;
+    width: 27vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 15px;
+    border: 3px solid var(--color08);
+    float: left;
+    background-color: rgb(66, 66, 66);
+}
+div#frameImg > img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+div#authorDescriptionU {
+    position: relative;
+    display: inline-block;
+    width: 45%;
+    padding: 20px;
+    margin: 15px 45px;
+}
+div#authorDescriptionU > p{
+    margin: 9vw 0 10px 0;
+}
+div#authorDescriptionD > p , div#authorDescriptionU > p {
+    color: var(--color08);    
+    font-size: 1.5em;
+}
+div#authorDescriptionD {
+    width: 100%;
+    padding: 30px;
+}
+div#authorBtn {
+    max-width: 50%;
+    font-size: 3em;
+    margin: 60px auto;
+    background-color: var(--color03);
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid var(--color02);
+    cursor: pointer;
+    transition: 1s;
+}
+div#authorBtn:hover {
+    max-width: 51%;
+    font-size: 3.1em;
+    box-shadow: 0 3px 66px var(--color03);
+    transition: 50ms;
+}
+/* footer */
 
 footer{
     position: fixed;
@@ -198,7 +259,7 @@ footer{
     left: 0;
     width: 100%;
     height: 2.3em;
-    border-top: 1px solid rgb(0, 0, 0);
+    border-top: 1px solid var(--color09);
     background-color: var(--color09);
     box-shadow: 0 -5px 3px rgba(255, 255, 255, 0.068);
 }

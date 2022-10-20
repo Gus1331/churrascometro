@@ -29,6 +29,10 @@ let p1 = document.getElementById("people1");
 let p2 = document.getElementById("people2");
 let d0 = document.getElementById("duration");
 let main = document.getElementsByTagName("main")[0];
+let statics = document.getElementById("statics");
+let authorPage = document.getElementById("authorPage");
+let authorText0 = document.getElementsByClassName("authorTexts")[0];
+let authorText1 = document.getElementsByClassName("authorTexts")[1];
 let foot = document.getElementsByTagName("footer")[0]; //idioma
 let modeIco = document.getElementById("modeIco"); //
 let credit = document.getElementById("footCredit"); //
@@ -47,13 +51,27 @@ let tables;
 //Funções
 function menu1() {
     li1.style.backgroundColor = "rgba(0, 0, 0, 0.164)";
+    li2.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
+    li3.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
+
+    main.style.display = "block";
 }
 function menu2() {
+    li1.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
     li2.style.backgroundColor = "rgba(0, 0, 0, 0.164)";
+    li3.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
+
+    main.style.display = "none";
 }
 function menu3() {
+    li1.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
+    li2.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
     li3.style.backgroundColor = "rgba(0, 0, 0, 0.164)";
+
+    main.style.display = "none";
 }
+
+
 function lights() {
     setInterval(lightOn, 600);
     setInterval(lightHigh, 1490);
@@ -87,7 +105,9 @@ function modeSwitch() {
         let resultText0 = document.getElementById("resultText0");
         let resultText1 = document.getElementById("resultText1");
         let resultText2 = document.getElementById("resultText2");
-        let h3 = document.getElementsByTagName("h3")[0];
+        let h3a = document.getElementsByTagName("h3")[0];
+        let h3b = document.getElementsByTagName("h3")[1];
+        let frameImg = document.getElementById("frameImg");
 
         main.style.backgroundImage = "linear-gradient(to bottom , var(--color08) 90% , var(--color10))";
         main.style.color = "var(--color09)";
@@ -96,17 +116,24 @@ function modeSwitch() {
         resultText0.style.color = "var(--color09)";
         resultText1.style.color = "var(--color09)";
         resultText2.style.color = "var(--color09)";
-        h3.style.color = "var(--color09)";
+        h3a.style.color = "var(--color09)";
+        h3b.style.color = "var(--color09)";
+        h3b.style.fontWeight = "bold";
         foot.style.backgroundColor = "var(--color08)";
         modeIco.src = "content/modeicon1.png";
         gitIco.src = "content/githubicon1.png";
         credit.style.color = "var(--color09)";
+        authorPage.style.backgroundImage = "linear-gradient(to top , var(--color08) 90% , var(--color10))";
+        authorText0.style.color = "var(--color09)";
+        authorText1.style.color = "var(--color09)";
+        frameImg.style.border = "3px solid var(--color09)";
     }
     function darkMode() {
         let resultText0 = document.getElementById("resultText0");
         let resultText1 = document.getElementById("resultText1");
         let resultText2 = document.getElementById("resultText2");
-        let h3 = document.getElementsByTagName("h3")[0];
+        let h3a = document.getElementsByTagName("h3")[0];
+        let h3b = document.getElementsByTagName("h3")[1];
 
         main.style.backgroundImage = "linear-gradient(to bottom , var(--color09) 90% , var(--color06))";
         main.style.color = "var(--color08)";
@@ -115,11 +142,17 @@ function modeSwitch() {
         resultText0.style.color = "var(--color08)";
         resultText1.style.color = "var(--color08)";
         resultText2.style.color = "var(--color08)";
-        h3.style.color = "var(--color08)";
+        h3a.style.color = "var(--color08)";
+        h3b.style.color = "var(--color08)";
+        h3b.style.fontWeight = "normal"
         foot.style.backgroundColor = "var(--color09)";
         modeIco.src = "content/modeicon0.png";
         gitIco.src = "content/githubicon0.png";
         credit.style.color = "var(--color08)";
+        authorPage.style.backgroundImage = "linear-gradient(to top , var(--color09) 90% , var(--color06))";
+        authorText0.style.color = "var(--color08)";
+        authorText1.style.color = "var(--color08)";
+        frameImg.style.border = "3px solid var(--color08)";
     }
 }
 function calc() {
@@ -164,6 +197,8 @@ function calc() {
         result.style.display = "block";
 
         if (mode == true) {
+            let h3 = document.getElementsByTagName("h3")[0];
+
             resultText0.style.color = "var(--color09)";
             resultText1.style.color = "var(--color09)";
             h3.style.color = "var(--color09)";

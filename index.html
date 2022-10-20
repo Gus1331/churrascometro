@@ -18,15 +18,9 @@
         <p>Planeje seu churrasco típico brasileiro para o domingão e feriados.</p>
         <nav>
             <ol id="menu">
-                <a href="index.html">
-                    <li id="li1">Calcular</li>
-                </a> <!-- consertar! -->
-                <a href="statics.html" rel="next" target="_self">
-                    <li id="li2">Estatísticas</li>
-                </a>
-                <a href="author.html" rel="author" target="_self">
-                    <li id="li3">Criador do site</li>
-                </a>
+                <li id="li1" onclick="menu1()">Calcular</li>
+                <li id="li2" onclick="menu2()">Estatísticas</li>
+                <li id="li3" onclick="menu3()">Criador do site</li>
             </ol>
         </nav>
     </header>
@@ -39,11 +33,87 @@
         <input type="number" id="people2" max="999" min="0">
         <h2>Duração do evento em horas:</h2>
         <input type="number" id="duration" max="24" min="1" placeholder="1">
-        <div>
+        <div id="bts">
             <a href="#result"><input type="button" value="Calcular" onclick="calc()" class="btn" id="btn1"></a>
             <input type="button" value="Salvar" class="btn" id="btn2">
         </div>
     </main>
+
+    <article id="statics">
+        <p id="staticsIntro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo corrupti aut totam numquam! Illo saepe fugiat.</p>
+
+        <!--table 1-->
+        <table id="tableLessThan">
+            <tr id="tr0X">
+                <th id="th0X">Idade</th>
+                <th id="th1X" class="tableHeadX">Carne</th>
+                <th id="th2X" class="tableHeadX">Bebidas (não alcoólicas)</th>
+                <th id="th3X" class="tableHeadX">Bebidas (alcoólicas)</th>
+                <th id="th4X" class="tableHeadX">Docês</th>
+            </tr>
+            <tr id="tr1X">
+                <th id="td00">Adultos</th>
+                <td id="td01X" class="tableDataX"></td>
+                <td id="td02X" class="tableDataX"></td>
+                <td id="td03X" class="tableDataX"></td>
+                <td id="td04X" class="tableDataX"></td>
+            </tr>
+            <tr id="tr2X">
+                <th id="td10X" class="tableDataX">Crianças</th>
+                <td id="td11X" class="tableDataX"></td>
+                <td id="td12X" class="tableDataX"></td>
+                <td id="td13X" class="tableDataX">---</td>
+                <td id="td14X" class="tableDataX"></td>
+            </tr>
+        </table>
+
+        <!--table 2-->
+        <table id="tableMoreThan">
+            <tr id="tr0X">
+                <th id="th0X">Idade</th>
+                <th id="th1X" class="tableHeadX">Carne</th>
+                <th id="th2X" class="tableHeadX">Bebidas (não alcoólicas)</th>
+                <th id="th3X" class="tableHeadX">Bebidas (alcoólicas)</th>
+                <th id="th4X" class="tableHeadX">Docês</th>
+            </tr>
+            <tr id="tr1X">
+                <th id="td00">Adultos</th>
+                <td id="td01X" class="tableDataX"></td>
+                <td id="td02X" class="tableDataX"></td>
+                <td id="td03X" class="tableDataX"></td>
+                <td id="td04X" class="tableDataX"></td>
+            </tr>
+            <tr id="tr2X">
+                <th id="td10X" class="tableDataX">Crianças</th>
+                <td id="td11X" class="tableDataX"></td>
+                <td id="td12X" class="tableDataX"></td>
+                <td id="td13X" class="tableDataX">---</td>
+                <td id="td14X" class="tableDataX"></td>
+            </tr>
+        </table>
+
+    </article>
+
+    <section id="authorPage">
+        <div id="frameImg">
+            <img src="https://avatars.githubusercontent.com/u/91276135?v=4" alt="author profile image">
+        </div>
+        <div id="authorDescriptionU">
+            <h3>Gus Oliver</h3>
+            <p class="authorTexts">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus corrupti natus assumenda, sint sequi
+                animi </p>
+        </div>
+        <div id="authorDescriptionD">
+            <p class="authorTexts">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos doloribus soluta assumenda rem officia
+                distinctio quos quidem. Inventore, enim? Provident quaerat deleniti in voluptas eum praesentium eligendi
+                veniam maiores dicta. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime harum, aperiam
+                omnis voluptatum voluptas repellendus ad magni reiciendis quas vel voluptatem veniam voluptate rem sunt
+                consequatur minima dolor, atque placeat!</p>
+        </div>
+        <a href="https://github.com/Gus1331" target="_blank" rel="author">
+            <div id="authorBtn"> Acesse meu GitHub </div>
+        </a>
+    </section>
 
 
     <div id="result">
@@ -55,7 +125,8 @@
         <p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de
             <strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ou
             qualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'L
-                de Refrigerante ou Suco </strong> (qualquer bebida leve). </p>
+                de Refrigerante ou Suco </strong> (qualquer bebida leve).
+        </p>
         <p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario em
             média <strong> '+ Math.ceil(chairs) +' Cadeiras</strong> e <strong>'+ tables +' Mesas</strong> (de quatro
             lugares).</p>
