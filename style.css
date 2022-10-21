@@ -193,6 +193,24 @@ h3{
 }
 
 /* statics */
+article#statics{
+    position: relative;
+    height: 400px;
+}
+.staticsP{
+    color: var(--color08);
+    margin: 20px 15px 5px 15px;
+}
+#tableLessThan , #tableMoreThan{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    width: 90%;
+    margin: 10px;
+}
+th , td{
+    border: 1px solid rgb(0, 0, 0);
+    padding: 5px;
+}
 
 /* author page */
 
