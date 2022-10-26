@@ -55,6 +55,8 @@ function menu1() {
     li3.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
 
     main.style.display = "block";
+    statics.style.display = "none"
+    authorPage.style.display = "none"
 }
 function menu2() {
     li1.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
@@ -62,6 +64,8 @@ function menu2() {
     li3.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
 
     main.style.display = "none";
+    statics.style.display = "block"
+    authorPage.style.display = "none"
 }
 function menu3() {
     li1.style.backgroundColor = "rgba(0, 0, 0, 0.000)";
@@ -69,6 +73,8 @@ function menu3() {
     li3.style.backgroundColor = "rgba(0, 0, 0, 0.164)";
 
     main.style.display = "none";
+    statics.style.display = "none"
+    authorPage.style.display = "block"
 }
 function lights() {
     setInterval(lightOn, 600);
@@ -127,12 +133,15 @@ function modeSwitch() {
         gitIco.src = "content/githubicon1.png";
         credit.style.color = "var(--color09)";
         authorPage.style.backgroundImage = "linear-gradient(to top , var(--color08) 90% , var(--color10))";
+        authorPage.style.fontWeight = "bold";
         authorText0.style.color = "var(--color09)";
         authorText1.style.color = "var(--color09)";
         frameImg.style.border = "3px solid var(--color09)";
         staticsP0.style.color = "var(--color09)";
         staticsP1.style.color = "var(--color09)";
         statics.style.backgroundImage = "linear-gradient(to top , var(--color08) 90% , var(--color10))";
+        staticsP0.style.fontWeight = "bold";
+        staticsP1.style.fontWeight = "bold";
     }
     function darkMode() {
         let resultText0 = document.getElementById("resultText0");
@@ -161,12 +170,15 @@ function modeSwitch() {
         gitIco.src = "content/githubicon0.png";
         credit.style.color = "var(--color08)";
         authorPage.style.backgroundImage = "linear-gradient(to top , var(--color09) 90% , var(--color06))";
+        authorPage.style.fontWeight = "normal";
         authorText0.style.color = "var(--color08)";
         authorText1.style.color = "var(--color08)";
         frameImg.style.border = "3px solid var(--color08)";
         staticsP0.style.color = "var(--color08)";
         staticsP1.style.color = "var(--color08)";
         statics.style.backgroundImage = "linear-gradient(to top , var(--color09) 90% , var(--color06))";
+        staticsP0.style.fontWeight = "normal";
+        staticsP1.style.fontWeight = "normal";
     }
 }
 function calc() {

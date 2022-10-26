@@ -198,6 +198,7 @@ h3{
 article#statics{
     position: relative;
     height: 400px;
+    display: none;
 }
 .staticsP{
     color: var(--color08);
@@ -228,6 +229,7 @@ section#authorPage{
     min-height: 500px;
     position: relative;
     margin-bottom: 160px;
+    display: none;
 }
 div#frameImg{
     height: 27vw;
@@ -278,6 +280,11 @@ div#authorBtn:hover {
     font-size: 3.1em;
     box-shadow: 0 3px 66px var(--color03);
     transition: 50ms;
+}
+div#authorBtn:active{
+    max-width: 47%;
+    font-size: 2.8em;
+    transition: 100ms;
 }
 /* footer */
 
