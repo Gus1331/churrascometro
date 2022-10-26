@@ -14,8 +14,8 @@
     --color08: rgb(255, 255, 255);
     --color09: rgb(000, 000, 000);
     --color10: rgb(221, 125, 125);
-    --color11: rgba(89, 2, 2, 0.7);
-    --color12: rgba(166, 3, 3, 0.7);
+    --color11: rgba(255, 0, 0, 0.8);
+    --color12: rgba(255, 0, 0, 0.5);
 }
 *{
     margin: 0;
@@ -208,15 +208,20 @@ article#statics{
     border: 1px solid rgb(0, 0, 0);
     width: 90%;
     margin: 10px;
+    cursor: default;
 }
 th , td{
     border: 1px solid rgb(0, 0, 0);
     padding: 5px;
+    transition: 450ms;
 }
 th{
     background-color: var(--color07);
 }
-
+td{
+    font-weight: bold;
+    text-align: center;
+}
 /* author page */
 
 section#authorPage{

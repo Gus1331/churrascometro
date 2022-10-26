@@ -221,125 +221,237 @@ function calc() {
 }
 
 //Tabela #statics
-let tr0X = document.getElementById("tr0X");
-let tr1X = document.getElementById("tr1X");
-let tr2X = document.getElementById("tr2X");
-let tr0Y = document.getElementById("tr0Y");
-let tr1Y = document.getElementById("tr1Y");
-let tr2Y = document.getElementById("tr2Y");
+{
+    let tr0X = document.getElementById("tr0X");
+    let tr1X = document.getElementById("tr1X");
+    let tr2X = document.getElementById("tr2X");
+    let tr0Y = document.getElementById("tr0Y");
+    let tr1Y = document.getElementById("tr1Y");
+    let tr2Y = document.getElementById("tr2Y");
 
-let th0X = document.getElementById("th0X");
-let th1X = document.getElementById("th1X");
-let th2X = document.getElementById("th2X");
-let th3X = document.getElementById("th3X");
-let th4X = document.getElementById("th4X");
-let th0Y = document.getElementById("th0Y");
-let th1Y = document.getElementById("th1Y");
-let th2Y = document.getElementById("th2Y");
-let th3Y = document.getElementById("th3Y");
-let th4Y = document.getElementById("th4Y");
+    let th0X = document.getElementById("th0X");
+    let th1X = document.getElementById("th1X");
+    let th2X = document.getElementById("th2X");
+    let th3X = document.getElementById("th3X");
+    let th4X = document.getElementById("th4X");
+    let th0Y = document.getElementById("th0Y");
+    let th1Y = document.getElementById("th1Y");
+    let th2Y = document.getElementById("th2Y");
+    let th3Y = document.getElementById("th3Y");
+    let th4Y = document.getElementById("th4Y");
 
-let td00X = document.getElementById("td00X");
-let td01X = document.getElementById("td01X");
-let td02X = document.getElementById("td02X");
-let td03X = document.getElementById("td03X");
-let td04X = document.getElementById("td04X");
-let td10X = document.getElementById("td10X");
-let td11X = document.getElementById("td11X");
-let td12X = document.getElementById("td12X");
-let td13X = document.getElementById("td13X");
-let td14X = document.getElementById("td14X");
-let td00Y = document.getElementById("td00Y");
-let td01Y = document.getElementById("td01Y");
-let td02Y = document.getElementById("td02Y");
-let td03Y = document.getElementById("td03Y");
-let td04Y = document.getElementById("td04Y");
-let td10Y = document.getElementById("td10Y");
-let td11Y = document.getElementById("td11Y");
-let td12Y = document.getElementById("td12Y");
-let td13Y = document.getElementById("td13Y");
-let td14Y = document.getElementById("td14Y");
+    let td00X = document.getElementById("td00X");
+    let td01X = document.getElementById("td01X");
+    let td02X = document.getElementById("td02X");
+    let td03X = document.getElementById("td03X");
+    let td04X = document.getElementById("td04X");
+    let td10X = document.getElementById("td10X");
+    let td11X = document.getElementById("td11X");
+    let td12X = document.getElementById("td12X");
+    let td13X = document.getElementById("td13X");
+    let td14X = document.getElementById("td14X");
+    let td00Y = document.getElementById("td00Y");
+    let td01Y = document.getElementById("td01Y");
+    let td02Y = document.getElementById("td02Y");
+    let td03Y = document.getElementById("td03Y");
+    let td04Y = document.getElementById("td04Y");
+    let td10Y = document.getElementById("td10Y");
+    let td11Y = document.getElementById("td11Y");
+    let td12Y = document.getElementById("td12Y");
+    let td13Y = document.getElementById("td13Y");
+    let td14Y = document.getElementById("td14Y");
 
-function resetTable() {
-    th0X.style.backgroundColor = "var(--color07)";
-    th1X.style.backgroundColor = "var(--color07)";
-    th2X.style.backgroundColor = "var(--color07)";
-    th3X.style.backgroundColor = "var(--color07)";
-    th4X.style.backgroundColor = "var(--color07)";
-    th0Y.style.backgroundColor = "var(--color07)";
-    th1Y.style.backgroundColor = "var(--color07)";
-    th2Y.style.backgroundColor = "var(--color07)";
-    th3Y.style.backgroundColor = "var(--color07)";
-    th4Y.style.backgroundColor = "var(--color07)";
+    function resetTable() {
+        th0X.style.backgroundColor = "var(--color07)";
+        th1X.style.backgroundColor = "var(--color07)";
+        th2X.style.backgroundColor = "var(--color07)";
+        th3X.style.backgroundColor = "var(--color07)";
+        th4X.style.backgroundColor = "var(--color07)";
+        th0Y.style.backgroundColor = "var(--color07)";
+        th1Y.style.backgroundColor = "var(--color07)";
+        th2Y.style.backgroundColor = "var(--color07)";
+        th3Y.style.backgroundColor = "var(--color07)";
+        th4Y.style.backgroundColor = "var(--color07)";
 
-    td00X.style.backgroundColor = "var(--color07)";
-    td01X.style.backgroundColor = "var(--color08)";
-    td02X.style.backgroundColor = "var(--color08)";
-    td03X.style.backgroundColor = "var(--color08)";
-    td04X.style.backgroundColor = "var(--color08)";
-    td10X.style.backgroundColor = "var(--color07)";
-    td11X.style.backgroundColor = "var(--color08)";
-    td12X.style.backgroundColor = "var(--color08)";
-    td13X.style.backgroundColor = "var(--color08)";
-    td14X.style.backgroundColor = "var(--color08)";
-    td00Y.style.backgroundColor = "var(--color07)";
-    td01Y.style.backgroundColor = "var(--color08)";
-    td02Y.style.backgroundColor = "var(--color08)";
-    td03Y.style.backgroundColor = "var(--color08)";
-    td04Y.style.backgroundColor = "var(--color08)";
-    td10Y.style.backgroundColor = "var(--color07)";
-    td11Y.style.backgroundColor = "var(--color08)";
-    td12Y.style.backgroundColor = "var(--color08)";
-    td13Y.style.backgroundColor = "var(--color08)";
-    td14Y.style.backgroundColor = "var(--color08)";
-}
-function agesX() {
-    th0X.style.backgroundColor = "var(--color11)";
-    td00X.style.backgroundColor = "var(--color12)";
-    td10X.style.backgroundColor = "var(--color12)";
-}
-function agesY() {
-    th0Y.style.backgroundColor = "var(--color11)";
-    td00Y.style.backgroundColor = "var(--color12)";
-    td10Y.style.backgroundColor = "var(--color12)";
-}
-function meatX(){
-    th1X.style.backgroundColor = "var(--color11)";
-    td01X.style.backgroundColor = "var(--color12)";
-    td11X.style.backgroundColor = "var(--color12)";
-}
-function meatY(){
-    th1Y.style.backgroundColor = "var(--color11)";
-    td01Y.style.backgroundColor = "var(--color12)";
-    td11Y.style.backgroundColor = "var(--color12)";
-}
-function drinkaX(){
-    th2X.style.backgroundColor = "var(--color11)";
-    td02X.style.backgroundColor = "var(--color12)";
-    td12X.style.backgroundColor = "var(--color12)";
-}
-function drinkaY(){
-    th2Y.style.backgroundColor = "var(--color11)";
-    td02Y.style.backgroundColor = "var(--color12)";
-    td12Y.style.backgroundColor = "var(--color12)";
-}
-function drinkbX(){
-    th3X.style.backgroundColor = "var(--color11)";
-    td03X.style.backgroundColor = "var(--color12)";
-    td13X.style.backgroundColor = "var(--color12)";
-}
-function drinkbY(){
-    th3Y.style.backgroundColor = "var(--color11)";
-    td03Y.style.backgroundColor = "var(--color12)";
-    td13Y.style.backgroundColor = "var(--color12)";
-}
-function candyX(){
-    th4X.style.backgroundColor = "var(--color11)";
-    td04X.style.backgroundColor = "var(--color12)";
-    td14X.style.backgroundColor = "var(--color12)";
-}
-function candyY(){
-    th4Y.style.backgroundColor = "var(--color11)";
-    td04Y.style.backgroundColor = "var(--color12)";
-    td14Y.style.backgroundColor = "var(--color12)";
+        td00X.style.backgroundColor = "var(--color07)";
+        td01X.style.backgroundColor = "var(--color08)";
+        td02X.style.backgroundColor = "var(--color08)";
+        td03X.style.backgroundColor = "var(--color08)";
+        td04X.style.backgroundColor = "var(--color08)";
+        td10X.style.backgroundColor = "var(--color07)";
+        td11X.style.backgroundColor = "var(--color08)";
+        td12X.style.backgroundColor = "var(--color08)";
+        td13X.style.backgroundColor = "var(--color08)";
+        td14X.style.backgroundColor = "var(--color08)";
+        td00Y.style.backgroundColor = "var(--color07)";
+        td01Y.style.backgroundColor = "var(--color08)";
+        td02Y.style.backgroundColor = "var(--color08)";
+        td03Y.style.backgroundColor = "var(--color08)";
+        td04Y.style.backgroundColor = "var(--color08)";
+        td10Y.style.backgroundColor = "var(--color07)";
+        td11Y.style.backgroundColor = "var(--color08)";
+        td12Y.style.backgroundColor = "var(--color08)";
+        td13Y.style.backgroundColor = "var(--color08)";
+        td14Y.style.backgroundColor = "var(--color08)";
+    }
+    function agesX() {
+        th0X.style.backgroundColor = "var(--color11)";
+        td00X.style.backgroundColor = "var(--color12)";
+        td10X.style.backgroundColor = "var(--color12)";
+    }
+    function agesY() {
+        th0Y.style.backgroundColor = "var(--color11)";
+        td00Y.style.backgroundColor = "var(--color12)";
+        td10Y.style.backgroundColor = "var(--color12)";
+    }
+    function meatX() {
+        th1X.style.backgroundColor = "var(--color11)";
+        td01X.style.backgroundColor = "var(--color12)";
+        td11X.style.backgroundColor = "var(--color12)";
+    }
+    function meatY() {
+        th1Y.style.backgroundColor = "var(--color11)";
+        td01Y.style.backgroundColor = "var(--color12)";
+        td11Y.style.backgroundColor = "var(--color12)";
+    }
+    function drinkaX() {
+        th2X.style.backgroundColor = "var(--color11)";
+        td02X.style.backgroundColor = "var(--color12)";
+        td12X.style.backgroundColor = "var(--color12)";
+    }
+    function drinkaY() {
+        th2Y.style.backgroundColor = "var(--color11)";
+        td02Y.style.backgroundColor = "var(--color12)";
+        td12Y.style.backgroundColor = "var(--color12)";
+    }
+    function drinkbX() {
+        th3X.style.backgroundColor = "var(--color11)";
+        td03X.style.backgroundColor = "var(--color12)";
+        td13X.style.backgroundColor = "var(--color12)";
+    }
+    function drinkbY() {
+        th3Y.style.backgroundColor = "var(--color11)";
+        td03Y.style.backgroundColor = "var(--color12)";
+        td13Y.style.backgroundColor = "var(--color12)";
+    }
+    function candyX() {
+        th4X.style.backgroundColor = "var(--color11)";
+        td04X.style.backgroundColor = "var(--color12)";
+        td14X.style.backgroundColor = "var(--color12)";
+    }
+    function candyY() {
+        th4Y.style.backgroundColor = "var(--color11)";
+        td04Y.style.backgroundColor = "var(--color12)";
+        td14Y.style.backgroundColor = "var(--color12)";
+    }
+
+    function adult0X() {
+        td00X.style.backgroundColor = "var(--color11)";
+        td01X.style.backgroundColor = "var(--color12)";
+        td02X.style.backgroundColor = "var(--color12)";
+        td03X.style.backgroundColor = "var(--color12)";
+        td04X.style.backgroundColor = "var(--color12)";
+    }
+    function adult0Y() {
+        td00Y.style.backgroundColor = "var(--color11)";
+        td01Y.style.backgroundColor = "var(--color12)";
+        td02Y.style.backgroundColor = "var(--color12)";
+        td03Y.style.backgroundColor = "var(--color12)";
+        td04Y.style.backgroundColor = "var(--color12)";
+    }
+    function child0X() {
+        td10X.style.backgroundColor = "var(--color11)";
+        td11X.style.backgroundColor = "var(--color12)";
+        td12X.style.backgroundColor = "var(--color12)";
+        td13X.style.backgroundColor = "var(--color12)";
+        td14X.style.backgroundColor = "var(--color12)";
+    }
+    function child0Y() {
+        td10Y.style.backgroundColor = "var(--color11)";
+        td11Y.style.backgroundColor = "var(--color12)";
+        td12Y.style.backgroundColor = "var(--color12)";
+        td13Y.style.backgroundColor = "var(--color12)";
+        td14Y.style.backgroundColor = "var(--color12)";
+    }
+
+    function adult1X() {
+        th1X.style.backgroundColor = "var(--color11)";
+        td00X.style.backgroundColor = "var(--color11)";
+        td01X.style.backgroundColor = "var(--color12)";
+    }
+    function adult2X() {
+        th2X.style.backgroundColor = "var(--color11)";
+        td00X.style.backgroundColor = "var(--color11)";
+        td02X.style.backgroundColor = "var(--color12)";
+    }
+    function adult3X() {
+        th3X.style.backgroundColor = "var(--color11)";
+        td00X.style.backgroundColor = "var(--color11)";
+        td03X.style.backgroundColor = "var(--color12)";
+    }
+    function adult4X() {
+        th4X.style.backgroundColor = "var(--color11)";
+        td00X.style.backgroundColor = "var(--color11)";
+        td04X.style.backgroundColor = "var(--color12)";
+    }
+    function child1X() {
+        th1X.style.backgroundColor = "var(--color11)";
+        td10X.style.backgroundColor = "var(--color11)";
+        td11X.style.backgroundColor = "var(--color12)";
+    }
+    function child2X() {
+        th2X.style.backgroundColor = "var(--color11)";
+        td10X.style.backgroundColor = "var(--color11)";
+        td12X.style.backgroundColor = "var(--color12)";
+    }
+    function child3X() {
+        th3X.style.backgroundColor = "var(--color11)";
+        td10X.style.backgroundColor = "var(--color11)";
+        td13X.style.backgroundColor = "var(--color09)";
+    }
+    function child4X() {
+        th4X.style.backgroundColor = "var(--color11)";
+        td10X.style.backgroundColor = "var(--color11)";
+        td14X.style.backgroundColor = "var(--color12)";
+    }
+    function adult1Y() {
+        th1Y.style.backgroundColor = "var(--color11)";
+        td00Y.style.backgroundColor = "var(--color11)";
+        td01Y.style.backgroundColor = "var(--color12)";
+    }
+    function adult2Y() {
+        th2Y.style.backgroundColor = "var(--color11)";
+        td00Y.style.backgroundColor = "var(--color11)";
+        td02Y.style.backgroundColor = "var(--color12)";
+    }
+    function adult3Y() {
+        th3Y.style.backgroundColor = "var(--color11)";
+        td00Y.style.backgroundColor = "var(--color11)";
+        td03Y.style.backgroundColor = "var(--color12)";
+    }
+    function adult4Y() {
+        th4Y.style.backgroundColor = "var(--color11)";
+        td00Y.style.backgroundColor = "var(--color11)";
+        td04Y.style.backgroundColor = "var(--color12)";
+    }
+    function child1Y() {
+        th1Y.style.backgroundColor = "var(--color11)";
+        td10Y.style.backgroundColor = "var(--color11)";
+        td11Y.style.backgroundColor = "var(--color12)";
+    }
+    function child2Y() {
+        th2Y.style.backgroundColor = "var(--color11)";
+        td10Y.style.backgroundColor = "var(--color11)";
+        td12Y.style.backgroundColor = "var(--color12)";
+    }
+    function child3Y() {
+        th3Y.style.backgroundColor = "var(--color11)";
+        td10Y.style.backgroundColor = "var(--color11)";
+        td13Y.style.backgroundColor = "var(--color09)";
+    }
+    function child4Y() {
+        th4Y.style.backgroundColor = "var(--color11)";
+        td10Y.style.backgroundColor = "var(--color11)";
+        td14Y.style.backgroundColor = "var(--color12)";
+    }
 }
