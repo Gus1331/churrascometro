@@ -38,6 +38,7 @@ let modeIco = document.getElementById("modeIco"); //
 let credit = document.getElementById("footCredit"); //
 let gitIco = document.getElementById("gitIco"); //
 let mode = false; //
+let lang
 //Variáveis de calculo
 let meat;
 let soda;
@@ -211,16 +212,30 @@ function calc() {
         chairs = chairs + chairs / 20;
         tables = Math.ceil((p1.value * 1 + p2.value * 1) / 4) + 2;
 
-        if (meat >= 3) {
-            console.log("Carne: %sKG\nCerveja: %sL\nRefrigerante: %sL\nDôces: %s Pacotes", Math.round(meat), beer, Math.ceil(pack), soda, candy);
-        }
+        if (lang == 'ptbr') {
+            if (meat >= 3) {
+                console.log("Carne: %sKG\nCerveja: %sL\nRefrigerante: %sL\nDôces: %s Pacotes", Math.round(meat), beer, Math.ceil(pack), soda, candy);
+            }
 
-        else {
-            console.log("Carne: %sKG\nCerveja: %sL\nRefrigerante: %sL\nDôces: %s Pacotes", meat, beer, Math.ceil(pack), soda, candy);
-        }
+            else {
+                console.log("Carne: %sKG\nCerveja: %sL\nRefrigerante: %sL\nDôces: %s Pacotes", meat, beer, Math.ceil(pack), soda, candy);
+            }
 
-        result.innerHTML = '<h3>Para o seu churrasco, será necessário:</h3><p id="resultText0">Recomendamos que no minímo para o seu evento não faltar nada será necessário <strong> ' + meat.toFixed(2) + 'KG de Carne </strong> para consumo principal, caso decida adoçar a festa, <strong> ' + Math.round(candy) + ' Pacotes de docês</strong> (com 6 unidades ou 90g dependedo do docê) seria uma boa pedida. </p><p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de <strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ou qualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'L de Refrigerante ou Suco </strong> (qualquer bebida leve). </p><p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario em média <strong> ' + Math.ceil(chairs) + ' Cadeiras</strong> e <strong>' + tables + ' Mesas</strong> (de quatro lugares).</p>';
-        result.style.display = "block";
+            result.innerHTML = '<h3>Para o seu churrasco, será necessário:</h3><p id="resultText0">Recomendamos que no minímo para o seu evento não faltar nada será necessário <strong> ' + meat.toFixed(2) + 'KG de Carne </strong> para consumo principal, caso decida adoçar a festa, <strong> ' + Math.round(candy) + ' Pacotes de docês</strong> (com 6 unidades ou 90g dependedo do docê) seria uma boa pedida. </p><p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de <strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ou qualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'L de Refrigerante ou Suco </strong> (qualquer bebida leve). </p><p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario em média <strong> ' + Math.ceil(chairs) + ' Cadeiras</strong> e <strong>' + tables + ' Mesas</strong> (de quatro lugares).</p>';
+            result.style.display = "block";
+        }
+        if (lang == 'enus') { //Terminar
+            if (meat >= 3) {
+                console.log("Meat: %sKG\nBeer: %sL\nSoda: %sL\nCandy: %s Packages", Math.round(meat), beer, Math.ceil(pack), soda, candy);
+            }
+
+            else {
+                console.log("Meat: %sKG\nBeer: %sL\nSoda: %sL\nCandy: %s Packages", meat, beer, Math.ceil(pack), soda, candy);
+            }
+
+            result.innerHTML = '<h3>For an amazing barbecue, you will need:</h3><p id="resultText0">We recomend you to have at least <strong> ' + meat.toFixed(2) + 'KG of Meat </strong> as the principal dish, if you may want a little bit more of sugar, <strong> ' + Math.round(candy) + ' Candy packages</strong> (90g or 6 units) would be perfect!. </p><p id="resultText1">And when we talk about drinks, we have got 2 choices, the adults drinks, and free alchool drinks, that would be  <strong> ' + Math.round(beer) + 'L of Beer</strong> (or ' + Math.ceil(pack) + ' packs) for those who cannot drink that kind of drink, we supose that <strong> ' + Math.round(soda) + 'L of Soda or Juice </strong> can handle it. </p><p id="resultText2">And what about tables and chairs?, do not worry, we got you! <strong> ' + Math.ceil(chairs) + ' Chairs</strong> and <strong>' + tables + ' Tables</strong> (4 sit table) would be enough.</p>';
+            result.style.display = "block";
+        }
 
         if (mode == true) {
             let h3 = document.getElementsByTagName("h3")[0];
