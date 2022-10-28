@@ -19,6 +19,8 @@
 */
 
 //Variáveis
+let title = document.getElementsByTagName("title")[0];
+let header = document.getElementsByTagName("header")[0];
 let li1 = document.getElementById("li1"); //
 let li2 = document.getElementById("li2"); //
 let li3 = document.getElementById("li3"); //
@@ -182,6 +184,30 @@ function modeSwitch() {
         staticsP1.style.fontWeight = "normal";
     }
 }
+function portuguese(){
+    title.innerText = "Churrascômetro";
+    header.innerHTML = '<h1>Churrascômetro</h1><p>Planeje seu churrasco típico brasileiro para o domingão e feriados.</p><nav><ol id="menu"><li id="li1" onclick="menu1()">Calcular</li><li id="li2" onclick="menu2()">Estatísticas</li><li id="li3" onclick="menu3()">Criador do site</li></ol></nav>';
+    main.innerHTML = '<h2>Número de Adultos:</h2><input type="number" id="people1" max="999" min="1"><h2>Número de Crianças:</h2><input type="number" id="people2" max="999" min="0"><h2>Duração do evento em horas:</h2><input type="number" id="duration" max="24" min="1" placeholder="1"><div id="bts"><a href="#result"><input type="button" value="Calcular" onclick="calc()" class="btn" id="btn1"></a><input type="button" value="Salvar" class="btn" id="btn2"></div>';
+    statics.innerHTML = '';
+    warning.innerHTML = '<p>Não deixe campos em branco!</p>';
+    authorPage.innerHTML = '<div id="frameImg">   <img src="https://avatars.githubusercontent.com/u/91276135?v=4" alt="author profile image"></div><div id="authorDescriptionU"><h3>Gus Oliver</h3>    <p class="authorTexts">Estudande full-stack, focado nos estudos e na prática, em busca de conseguir experiência emprojetos solos ou em grupo.</p></div><div id="authorDescriptionD"><p class="authorTexts">Nascido em fevereiro de 2003, amante de tecnologia desde criança busca aprender e dominar seu conhecimento na área. Com interesse em HTML, CSS e JavaScript, iniciou seus estudos full-stack tendo visão de setornar um programador profissional, estudando desde tipografia, harmonia e psicologia das cores, layout, eversionamento para poder colocar seus projetos em prática. </p></div><a href="https://github.com/Gus1331" target="_blank" rel="author"><div id="authorBtn"> Acesse meu GitHub </div></a>';
+    result.innerHTML = '<h3>Para o seu churrasco, será necessário:</h3><p id="resultText0">Recomendamos que no minímo para o seu evento não faltar nada será necessário <strong> ' +meat.toFixed(2) + 'KG de Carne </strong> para consumo principal, caso decida adoçar a festa, <strong> '+ Math.round(candy) + ' Pacotes de docês</strong> (com 6 unidades ou 90g dependedo do docê) seria umaboa pedida. </p><p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de<strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ouqualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'Lde Refrigerante ou Suco </strong> (qualquer bebida leve).</p><p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario emmédia <strong> '+ Math.ceil(chairs) +' Cadeiras</strong> e <strong>'+ tables +' Mesas</strong> (de quatrolugares).</p>';
+    foot.innerHTML = '<div id="align"><abbr title="Modo Claro / Escuro"><div class="footIcon"><img onclick="modeSwitch();" id="modeIco" src="content/modeicon0.png"class="footIcon"></abbr><abbr title="Português do Brasil" onclick="english()"><div class="footIcon"><img src="content/bricon.png" class="footIcon"></abbr><a href="https://github.com/Gus1331" target="_blank" rel="author"><abbr title="Meu GitHub"><img id="gitIco"src="content/githubicon0.png" class="footIcon"></abbr></a><a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbrtitle="Foto de fundo: Malte Luk no Pexels"><div class="footIcon" id="footCredit">C</div></abbr></a</div>';
+
+    lights();
+}
+function english(){
+    title.innerText = "Barbecalculation";
+    header.innerHTML = '<h1>Barbecuelation</h1><p>The best way to manage your barbecue in hot holidays and sundays(in Brazilian style).</p><nav><ol id="menu"><li id="li1" onclick="menu1()">Calculate</li><li id="li2" onclick="menu2()">Statcis</li><li id="li3" onclick="menu3()">Site Creator</li></ol></nav>';
+    main.innerHTML = '<h2>How many adults?</h2><input type="number" id="people1" max="999" min="1"><h2>How many kids?</h2><input type="number" id="people2" max="999" min="0"><h2>How long is this event in hours?</h2><input type="number" id="duration" max="24" min="1" placeholder="1"><div id="bts"><a href="#result"><input type="button" value="Calculate" onclick="calc()" class="btn" id="btn1"></a><input type="button" value="Save" class="btn" id="btn2"></div>';
+    statics.innerHTML = '';
+    warning.innerHTML = "<p>Don't let any blanck fields!</p>";
+    authorPage.innerHTML = '<div id="frameImg"><img src="https://avatars.githubusercontent.com/u/91276135?v=4" alt="author profile image"></div><div id="authorDescriptionU"><h3>Gus Oliver</h3><p class="authorTexts">Full-stack student, focused on learning and his own projects, wishing be a better professionaleach day.</p></div><div id="authorDescriptionD"><p class="authorTexts">Born in february 2003, Lover of tecnology and computer cience trying to dominate the hability andwisdom in programing. Loving to code in HTML, JavaScript and CSS, he started studying full-stack content to get in thisworld of programing. </p></div><a href="https://github.com/Gus1331" target="_blank" rel="author"><div id="authorBtn"> Visit my GitHub </div></a>';
+    result.innerHTML = '<h3>For an amazing barbecue, you will need:</h3><p id="resultText0">We recomend you to have at least <strong> ' + meat.toFixed(2) + 'KG of Meat </strong> as the principal dish, if you may want a little bit more of sugar, <strong> ' + Math.round(candy) + ' Candy packages</strong> (90g or 6 units) would be perfect!. </p><p id="resultText1">And when we talk about drinks, we have got 2 choices, the adults drinks, and free alchool drinks, that would be  <strong> ' + Math.round(beer) + 'L of Beer</strong> (or ' + Math.ceil(pack) + ' packs) for those who cannot drink that kind of drink, we supose that <strong> ' + Math.round(soda) + 'L of Soda or Juice </strong> can handle it. </p><p id="resultText2">And what about tables and chairs?, do not worry, we got you! <strong> ' + Math.ceil(chairs) + ' Chairs</strong> and <strong>' + tables + ' Tables</strong> (4 sit table) would be enough.</p>';
+    foot.innerHTML = '<div id="align"><abbr title="White / Dark Mode"><div class="footIcon"><img onclick="modeSwitch();" id="modeIco" src="content/modeicon0.png"class="footIcon"></abbr><abbr title="English" onclick="portuguese()"><div class="footIcon"><img src="content/usaicon.png" class="footIcon"></abbr><a href="https://github.com/Gus1331" target="_blank" rel="author"><abbr title="My GitHub"><img id="gitIco"src="content/githubicon0.png" class="footIcon"></abbr></a><a href="https://www.pexels.com/pt-br/@maltelu" target="_blank" rel="external"><abbrtitle="Background Picture:Malte Luk on Pexels"><div class="footIcon" id="footCredit">C</div></abbr></a></div>';
+
+    lights();
+}
 function calc() {
 
 
@@ -224,7 +250,7 @@ function calc() {
             result.innerHTML = '<h3>Para o seu churrasco, será necessário:</h3><p id="resultText0">Recomendamos que no minímo para o seu evento não faltar nada será necessário <strong> ' + meat.toFixed(2) + 'KG de Carne </strong> para consumo principal, caso decida adoçar a festa, <strong> ' + Math.round(candy) + ' Pacotes de docês</strong> (com 6 unidades ou 90g dependedo do docê) seria uma boa pedida. </p><p id="resultText1">Para bebida, temos duas opções, as para adultos e as sem faixa etária, que se aproximam de <strong> ' + Math.round(beer) + 'L de Cerveja</strong> (ou aproximadamente ' + Math.ceil(pack) + ' packs, ou qualquer outra bebida alcólica, dependendo do consumo) e como outra opção <strong> ' + Math.round(soda) + 'L de Refrigerante ou Suco </strong> (qualquer bebida leve). </p><p id="resultText2">Para questões de administração de espaço, tendo em consideração que seria necessario em média <strong> ' + Math.ceil(chairs) + ' Cadeiras</strong> e <strong>' + tables + ' Mesas</strong> (de quatro lugares).</p>';
             result.style.display = "block";
         }
-        if (lang == 'enus') { //Terminar
+        if (lang == 'enus') {
             if (meat >= 3) {
                 console.log("Meat: %sKG\nBeer: %sL\nSoda: %sL\nCandy: %s Packages", Math.round(meat), beer, Math.ceil(pack), soda, candy);
             }
@@ -249,14 +275,6 @@ function calc() {
 
 //Tabela #statics
 {
-    let tr0X = document.getElementById("tr0X");
-    let tr1X = document.getElementById("tr1X");
-    let tr2X = document.getElementById("tr2X");
-    let tr0Y = document.getElementById("tr0Y");
-    let tr1Y = document.getElementById("tr1Y");
-    let tr2Y = document.getElementById("tr2Y");
-
-    let th0X = document.getElementById("th0X");
     let th1X = document.getElementById("th1X");
     let th2X = document.getElementById("th2X");
     let th3X = document.getElementById("th3X");
